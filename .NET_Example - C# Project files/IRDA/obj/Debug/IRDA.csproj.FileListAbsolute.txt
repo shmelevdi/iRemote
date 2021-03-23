@@ -1,0 +1,24 @@
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\bin\Debug\IRDA.exe.config
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\bin\Debug\IRDA.exe
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\bin\Debug\IRDA.pdb
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.csprojAssemblyReference.cache
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.Form1.resources
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.Properties.Resources.resources
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.csproj.GenerateResource.cache
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.exe
+C:\Users\Дмитрий\source\repos\IRDA\IRDA\obj\Debug\IRDA.pdb
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\IRDA.exe.config
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\IRDA.exe
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\IRDA.pdb
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.csprojAssemblyReference.cache
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.Form1.resources
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.Properties.Resources.resources
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.csproj.GenerateResource.cache
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.csproj.CoreCompileInputs.cache
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.exe
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.pdb
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\Newtonsoft.Json.dll
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\websocket-sharp.dll
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\Newtonsoft.Json.xml
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\bin\Debug\websocket-sharp.xml
+H:\Рабочий стол\WebSocket IRDA\IRDA\IRDA\obj\Debug\IRDA.csproj.CopyComplete
