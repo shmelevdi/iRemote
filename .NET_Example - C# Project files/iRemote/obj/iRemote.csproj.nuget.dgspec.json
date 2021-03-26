@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\iRemote.csproj": {}
+  },
+  "projects": {
+    "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\iRemote.csproj": {
+      "version": "1.0.1",
+      "restore": {
+        "projectUniqueName": "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\iRemote.csproj",
+        "projectName": "iRemote",
+        "projectPath": "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\iRemote.csproj",
+        "packagesPath": "C:\\Users\\Dmitrii\\.nuget\\packages\\",
+        "outputPath": "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dmitrii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net45"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net45": {
+            "targetAlias": "net45",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net45": {
+          "targetAlias": "net45",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "WebSocketSharp-netstandard": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

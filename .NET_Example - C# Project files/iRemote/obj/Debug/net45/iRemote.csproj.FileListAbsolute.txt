@@ -1,0 +1,11 @@
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\bin\Debug\net45\iRemote.dll
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\bin\Debug\net45\iRemote.pdb
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\bin\Debug\net45\Newtonsoft.Json.dll
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\bin\Debug\net45\websocket-sharp.dll
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.csprojAssemblyReference.cache
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.AssemblyInfoInputs.cache
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.AssemblyInfo.cs
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.csproj.CoreCompileInputs.cache
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.csproj.CopyComplete
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.dll
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\iRemote\obj\Debug\net45\iRemote.pdb

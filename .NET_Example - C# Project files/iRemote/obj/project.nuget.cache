@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ll99YR6kyr5tcKnH6EofRztqIhWziLOIK12cDTpTyFis60yobs52YpCS4ehTBuiZCd/h/vu/61fMepnnsMmtPw==",
+  "success": true,
+  "projectFilePath": "H:\\Рабочий стол\\iRemote\\.NET_Example - C# Project files\\iRemote\\iRemote.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Dmitrii\\.nuget\\packages\\websocketsharp-netstandard\\1.0.1\\websocketsharp-netstandard.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
