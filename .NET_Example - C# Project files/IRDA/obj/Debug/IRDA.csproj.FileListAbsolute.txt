@@ -39,3 +39,4 @@ H:\Рабочий стол\iRemote\.NET_Example - C# Project files\IRDA\obj\Debu
 H:\Рабочий стол\iRemote\.NET_Example - C# Project files\IRDA\obj\Debug\IRDA.pdb
 H:\Рабочий стол\iRemote\.NET_Example - C# Project files\IRDA\bin\Debug\iRemote.dll
 H:\Рабочий стол\iRemote\.NET_Example - C# Project files\IRDA\bin\Debug\iRemote.pdb
+H:\Рабочий стол\iRemote\.NET_Example - C# Project files\IRDA\bin\Debug\INIFileParser.dll

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using WebSocketSharp;
 
-namespace Shmelevdi.iRemote.Networking
+namespace Shmelevdi.iRemoteProject.Networking
 {
     class WebSocketHandler
     {

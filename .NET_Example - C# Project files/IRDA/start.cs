@@ -4,7 +4,8 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Shmelevdi.iRemote;
+using Shmelevdi.iRemoteProject;
+using Shmelevdi.iRemoteProject.Settings;
 
 namespace IRDA
 {
@@ -57,11 +58,17 @@ namespace IRDA
 
             codes.Add("FE0AF5", "iRemote"); // ------------- random name for HEX (if using w/o keyboard bind)
 
-            iRemote ir = new iRemote("5CCF7F2CC60B");
-            ir.Start();
-            ir.DeviceFound += (sndr, args) => {
-                label6.Text = "Found!";
-            };
+            //iRemote ir = new iRemote("5CCF7F2CC60B");
+            //ir.Start();
+            //ir.DeviceFound += (sndr, args) => {               
+            //    label6.Invoke(new Action(() => {
+            //        label6.Text = "Found!"; 
+            //    }));
+            //    MessageBox.Show("");
+            //};
+
+            Configuration conf = new Configuration();
+            
         }
 
         

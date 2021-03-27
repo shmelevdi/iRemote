@@ -51,6 +51,10 @@
             "WebSocketSharp-netstandard": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "ini-parser": {
+              "target": "Package",
+              "version": "[2.5.2, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"

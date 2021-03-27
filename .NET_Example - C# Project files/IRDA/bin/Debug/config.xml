@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<properties>
+  <program>
+    <version>1.0</version>
+  </program>
+  <device>
+    <model>ESP8266</model>
+    <mac>5C:CF:7F:2C:C6:0B</mac>
+  </device>
+  <irda>
+    <action_sleep>500</action_sleep>
+    <codes>
+      <FE807F keyaction="{1}" name="1"/>
+      <FE40BF keyaction="{2}" name="2"/>
+      <FEC03F keyaction="{3}" name="3"/>
+      <FE20DF keyaction="{4}" name="4"/>
+      <FEA05F keyaction="{5}" name="5"/>
+      <FE609F keyaction="{6}" name="6"/>
+      <FEE01F keyaction="{7}" name="7"/>
+      <FE10EF keyaction="{8}" name="8"/>
+      <FE906F keyaction="{9}" name="9"/>
+      <FE00FF keyaction="{0}" name="0"/>
+
+      <FE30CF keyaction="{UP}" name="Up"/>
+      <FEB04F keyaction="{DOWN}" name="Down"/>
+      <FEF00F keyaction="{LEFT}" name="Left"/>
+      <FE708F keyaction="{RIGHT}" name="Right"/>
+
+      <FE08F7 keyaction="{ENTER}" name="Enter"/>
+      <FEC837 keyaction="{ESC}" name="Esc"/>
+
+      <FE0AF5 action="windowstate"/>
+    </codes>
+  </irda>
+</properties>

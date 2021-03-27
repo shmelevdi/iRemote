@@ -2,14 +2,15 @@
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
-using Shmelevdi.iRemote.Networking;
+using Shmelevdi.iRemoteProject.Networking;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Shmelevdi.iRemote
+namespace Shmelevdi.iRemoteProject
 {
     public class iRemote
     {
+        public static string version = "1.0";
         /// <summary>
         /// Information about the found device
         /// </summary>

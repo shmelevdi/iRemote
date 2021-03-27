@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Shmelevdi.iRemote.Networking
+namespace Shmelevdi.iRemoteProject.Networking
 {
     class SearchDeviceSupport
     {

@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 
-namespace Shmelevdi.iRemote.Networking
+namespace Shmelevdi.iRemoteProject.Networking
 {
     /// <summary>
     /// Information about the found device
