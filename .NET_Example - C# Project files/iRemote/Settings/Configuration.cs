@@ -47,7 +47,12 @@ namespace Shmelevdi.iRemoteProject.Settings
         /// <summary>
         /// Directly the code storage itself
         /// </summary>
-        public Dictionary<string, CodeAtributes> Storage { get; private set; }
+        public Dictionary<string, CodeAtributes> Storage { get; set; }
+
+        public Codes()
+        {
+            Storage = new Dictionary<string, CodeAtributes> { };
+        }
 
     }
 
@@ -63,6 +68,33 @@ namespace Shmelevdi.iRemoteProject.Settings
         {
             MAC = _mac;
             Model = _model;
+        }
+    }
+    /// <summary>
+    /// Program settings
+    /// </summary>
+    public class ProgramSettings
+    {
+        /// <summary>
+        /// Reconnect if the connection is broken? True or false
+        /// </summary>
+        public bool Reconnect { get; private set; }
+
+        /// <summary>
+        /// Reconnect timer in seconds
+        /// </summary>
+        public int ReconnectTimer { get; private set; }
+
+        /// <summary>
+        /// Program version on configuration
+        /// </summary>
+        public string Version { get; private set; }
+
+        public ProgramSettings(string _version, bool _reconnect=false, int _reconTimer=10)
+        {
+            Reconnect = _reconnect;
+            ReconnectTimer = _reconTimer;
+            Version = _version;
         }
     }
 
@@ -104,6 +136,7 @@ namespace Shmelevdi.iRemoteProject.Settings
         private Loader Loader;
         public Codes Codes;
         public Device Device;
+        public ProgramSettings ProgramSettings;
         public int IRda_sleep;
         /// <summary>
         /// Path to the program configuration
@@ -116,7 +149,19 @@ namespace Shmelevdi.iRemoteProject.Settings
             Codes = new Codes();
             if (iRemote.version == Loader.data["program"]["version"])
             {
-                MessageBox.Show("");
+                ProgramSettings = new ProgramSettings(Loader.data["program"]["version"], bool.Parse(Loader.data["program"]["reconnect"]), Int32.Parse(Loader.data["program"]["reconnect_timer"]));
+                for (int i=1;i<= Loader.data["codes"].Count;i++)
+                {
+                    string code_num = "code" + i.ToString();               
+                    Codes.Storage.Add(
+                        Loader.data["codes"][code_num],
+                        new CodeAtributes(
+                            Loader.data[code_num]["keyaction"],
+                            Loader.data[code_num]["action"],
+                            Loader.data[code_num]["name"]
+                        )
+                    );                    
+                }
             }
             else
             {

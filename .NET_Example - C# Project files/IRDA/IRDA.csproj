@@ -114,9 +114,6 @@
     <None Include="bin\Debug\trayblue.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\config.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\iRemote\iRemote.csproj">
       <Project>{ce4e6fc6-67fb-419f-b51c-4d16c87d1933}</Project>
       <Name>iRemote</Name>
