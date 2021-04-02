@@ -37,38 +37,17 @@ namespace IRDA
         Dictionary<string, string> codes = new Dictionary<string, string>();
 
         private void Form1_Load(object sender, EventArgs e)
-        {          
-            // - codes: HEX - IRDA Hex command, {X} - key on keyboard
-            codes.Add("FE807F", "{1}");
-            codes.Add("FE40BF", "{2}");
-            codes.Add("FEC03F", "{3}");
-            codes.Add("FE20DF", "{4}");
-            codes.Add("FEA05F", "{5}");
-            codes.Add("FE609F", "{6}");
-            codes.Add("FEE01F", "{7}");
-            codes.Add("FE10EF", "{8}");
-            codes.Add("FE906F", "{9}");
-            codes.Add("FE00FF", "{0}");
-            codes.Add("FE30CF", "{UP}");
-            codes.Add("FEB04F", "{DOWN}");
-            codes.Add("FEF00F", "{LEFT}");
-            codes.Add("FE708F", "{RIGHT}");
-            codes.Add("FE08F7", "{ENTER}");
-            codes.Add("FEC837", "{ESC}");
+        {
+            iRemote ir = new iRemote("5CCF7F2CC60B");
+            ir.Start();
+            ir.DeviceFound += (sndr, args) =>
+            {
+                label6.Invoke(new Action(() =>
+                {
+                    label6.Text = "Found!";
+                }));
+            };
 
-            codes.Add("FE0AF5", "iRemote"); // ------------- random name for HEX (if using w/o keyboard bind)
-
-            //iRemote ir = new iRemote("5CCF7F2CC60B");
-            //ir.Start();
-            //ir.DeviceFound += (sndr, args) => {               
-            //    label6.Invoke(new Action(() => {
-            //        label6.Text = "Found!"; 
-            //    }));
-            //    MessageBox.Show("");
-            //};
-
-            Configuration conf = new Configuration();
-            
         }
 
         

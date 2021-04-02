@@ -1,10 +1,9 @@
 ﻿using System;
-using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Net.NetworkInformation;
 using Shmelevdi.iRemoteProject.Networking;
-using System.Collections.Generic;
 using System.Windows.Forms;
+using Shmelevdi.iRemoteProject.Settings;
 
 namespace Shmelevdi.iRemoteProject
 {
@@ -81,6 +80,7 @@ namespace Shmelevdi.iRemoteProject
         public SearchDevice SearchDevice;
         public ServerStatus ServerStatus;
         public iRemoteData irdata;
+        public Configuration conf;
         public string MAC_String;
 
         /// <summary>
@@ -90,7 +90,8 @@ namespace Shmelevdi.iRemoteProject
         public iRemote(string MAC_String)
         {
             this.MAC_String = MAC_String;
-            irdata = new iRemoteData();
+            this.irdata = new iRemoteData();
+            this.conf = new Configuration();
         }
 
         public void Start()

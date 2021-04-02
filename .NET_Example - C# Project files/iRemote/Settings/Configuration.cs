@@ -1,10 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Net;
 using IniParser;
 using IniParser.Model;
 
@@ -63,11 +59,17 @@ namespace Shmelevdi.iRemoteProject.Settings
     {
         public string Model { get; private set; }
         public string MAC { get; private set; }
+        public bool ManualConnect { get; private set; }
+        public IPAddress ManualIPAddress { get; private set; }
+        public ushort ManualPort { get; private set; }
 
-        public Device(string _model, string _mac)
+        public Device(string _model, string _mac, bool _manualcon, IPAddress _manualip, ushort _manualport)
         {
             MAC = _mac;
             Model = _model;
+            ManualConnect = _manualcon;
+            ManualIPAddress = _manualip;
+            ManualPort = _manualport;
         }
     }
     /// <summary>
@@ -147,9 +149,30 @@ namespace Shmelevdi.iRemoteProject.Settings
         {
             Loader = new Loader();
             Codes = new Codes();
+
+            IPAddress manip = null;
+            ushort manport = 8080;
+            bool mancon = false;
+            string model = null;
+            string mac = null;
+
+            bool recon = false;
+            int recontimer = 10;
+
             if (iRemote.version == Loader.data["program"]["version"])
             {
-                ProgramSettings = new ProgramSettings(Loader.data["program"]["version"], bool.Parse(Loader.data["program"]["reconnect"]), Int32.Parse(Loader.data["program"]["reconnect_timer"]));
+
+                if (Loader.data["device"].ContainsKey("model")) model = Loader.data["device"]["model"];
+                if (Loader.data["device"].ContainsKey("mac")) mac = Loader.data["device"]["mac"];
+                if (Loader.data["device"].ContainsKey("manual_con")) mancon = bool.Parse(Loader.data["device"]["manual_con"]);
+                if (Loader.data["device"].ContainsKey("manual_con_ip")) manip = IPAddress.Parse(Loader.data["device"]["manual_con_ip"]);
+                if (Loader.data["device"].ContainsKey("manual_con_port")) manport = ushort.Parse(Loader.data["device"]["manual_con_port"]);
+                Device = new Device(model, mac, mancon, manip, manport);
+
+                if (Loader.data["program"].ContainsKey("reconnect")) recon = bool.Parse(Loader.data["program"]["reconnect"]);
+                if (Loader.data["program"].ContainsKey("reconnect_timer")) recontimer = Int32.Parse(Loader.data["program"]["reconnect_timer"]);
+                ProgramSettings = new ProgramSettings(Loader.data["program"]["version"], recon, recontimer);
+
                 for (int i=1;i<= Loader.data["codes"].Count;i++)
                 {
                     string code_num = "code" + i.ToString();               
