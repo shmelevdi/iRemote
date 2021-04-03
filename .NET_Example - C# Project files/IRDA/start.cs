@@ -38,13 +38,21 @@ namespace IRDA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            iRemote ir = new iRemote("5CCF7F2CC60B");
+            iRemote ir = new iRemote();
             ir.Start();
             ir.DeviceFound += (sndr, args) =>
             {
                 label6.Invoke(new Action(() =>
                 {
-                    label6.Text = "Found!";
+                    label6.Text = "Устройство найдено!";
+                }));
+            };
+
+            ir.DeviceNotFound += (sndr, args) =>
+            {
+                label6.Invoke(new Action(() =>
+                {
+                    label6.Text = "Устройство не найдено!";
                 }));
             };
 

@@ -87,17 +87,15 @@ namespace Shmelevdi.iRemoteProject
         /// Accepts a MAC address without colons as a string parameter.For example: "5CCF7F2CC60B"
         /// </summary>
         /// <param name="MAC_String"></param>
-        public iRemote(string MAC_String)
+        public iRemote()
         {
-            this.MAC_String = MAC_String;
             this.irdata = new iRemoteData();
             this.conf = new Configuration();
         }
 
         public void Start()
         {
-            SearchDevice = new SearchDevice(MAC_String);
-
+            SearchDevice = new SearchDevice(conf.Device.MAC);
             SearchDevice.Found += (sender, e) => {
                 irdata.ip = e.ip;
                 DeviceFound(this, irdata);

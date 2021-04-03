@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
+using System.Windows.Forms;
 using IniParser;
 using IniParser.Model;
 
@@ -118,6 +120,11 @@ namespace Shmelevdi.iRemoteProject.Settings
                 var parser = new FileIniDataParser();
                 if (path == null) path_to_file = Environment.CurrentDirectory + @"\config.ini";
                 else path_to_file = path;
+
+                if(!File.Exists(path_to_file))
+                {
+
+                }
                 data = new IniData();
                 data = parser.ReadFile(path_to_file);
             }
@@ -163,7 +170,7 @@ namespace Shmelevdi.iRemoteProject.Settings
             {
 
                 if (Loader.data["device"].ContainsKey("model")) model = Loader.data["device"]["model"];
-                if (Loader.data["device"].ContainsKey("mac")) mac = Loader.data["device"]["mac"];
+                if (Loader.data["device"].ContainsKey("mac")) mac = Loader.data["device"]["mac"].Replace(":", "");
                 if (Loader.data["device"].ContainsKey("manual_con")) mancon = bool.Parse(Loader.data["device"]["manual_con"]);
                 if (Loader.data["device"].ContainsKey("manual_con_ip")) manip = IPAddress.Parse(Loader.data["device"]["manual_con_ip"]);
                 if (Loader.data["device"].ContainsKey("manual_con_port")) manport = ushort.Parse(Loader.data["device"]["manual_con_port"]);
