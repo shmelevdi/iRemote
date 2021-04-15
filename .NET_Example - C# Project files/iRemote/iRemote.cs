@@ -17,6 +17,7 @@ namespace Shmelevdi.iRemoteProject
         {
             private IPAddress ipdata;
             private IPStatus state;
+            private ushort portd;
 
             /// <summary>
             /// Returns the IP of the found device
@@ -45,6 +46,18 @@ namespace Shmelevdi.iRemoteProject
                 get
                 {
                     return this.state;
+                }
+            }
+
+            public ushort port
+            {
+                set
+                {
+                    portd = port;
+                }
+                get
+                {
+                    return this.portd;
                 }
             }
         }
@@ -81,6 +94,7 @@ namespace Shmelevdi.iRemoteProject
         public ServerStatus ServerStatus;
         public iRemoteData irdata;
         public Configuration conf;
+        public WebSocketHandler WSHandler;
         public string MAC_String;
 
         /// <summary>
@@ -99,7 +113,8 @@ namespace Shmelevdi.iRemoteProject
             SearchDevice.Found += (sender, e) => {
                 irdata.ip = e.ip;
                 DeviceFound(this, irdata);
-                ServerStatus = new ServerStatus(e.ip);
+                ServerStatus = new ServerStatus(e.ip);//server pinger
+                WSHandler = new WebSocketHandler(irdata.ip, conf.Device.ManualPort); //websocket client
 
                 ServerStatus.Die += (sndr, eargs) => {
                     irdata.status = eargs.status;
